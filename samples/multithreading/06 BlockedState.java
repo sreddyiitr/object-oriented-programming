@@ -1,7 +1,11 @@
 public class BlockedState {
     public static void main(String[] args) throws InterruptedException {
-        Thread t1 = new Thread(new DemoRunnable());
-        Thread t2 = new Thread(new DemoRunnable());
+        
+        Runnable runnable1 = new DemoRunnable();
+        Runnable runnable2 = new DemoRunnable();
+        
+        Thread t1 = new Thread(runnable1);
+        Thread t2 = new Thread(runnable2);
         
         t1.start();
         t2.start();
@@ -12,7 +16,8 @@ public class BlockedState {
         // Since method called from run() method is a synchronized method and it has infinite loop 
         // logic, t2 never gets a chance to execute synchronized method. t1 has lock until infinite loop
         // is executed.
-        System.out.println(t2.getState());
+        System.out.println("Thread t1 state: " + t1.getState());
+        System.out.println("Thread t2 state: " + t2.getState());
         System.exit(0);
     }
 }
