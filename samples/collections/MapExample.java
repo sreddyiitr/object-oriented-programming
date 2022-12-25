@@ -11,16 +11,16 @@ public class MapExample {
 	public static void main(String args[]) {
 
 		Map<Integer, String> hashTable = new Hashtable<>();
-		Map<Integer, String> hashMap = new HashMap<>();
+		Map<Integer, String> hashMap = new HashMap<>(); 
 
 		hashTable.put(1, "one");
 		hashTable.put(2, "two");
 		hashTable.put(3, "three");
-		hashTable.compute(null, null);
 
 		hashMap.put(4, "four");
 		hashMap.put(5, "five");
 		hashMap.put(6, "six");
+		hashMap.put(7, null);
 
 		System.out.println("Hash Table: ");
 		for (Entry<Integer, String> entry : hashTable.entrySet())
