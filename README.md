@@ -6,3 +6,7 @@ Foundations of OOPS
 Foundations of Collections
 
 [Presentation](https://docs.google.com/presentation/d/1Luoj4gpvES3WFuhHm2MxXLDGPno0Ch7EKpNZjrbOdZM/edit#slide=id.p)
+
+Java Database Connectivity
+
+[Presentation]
