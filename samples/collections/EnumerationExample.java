@@ -1,23 +1,31 @@
 package com.sunil.collections;
 
-import java.util.StringTokenizer;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Vector;
 
 public class EnumerationExample {
 
 	public static void main(String[] args) {
 		
-		// Since StringTokenizer implements Enumeration interface
-		// we can call hasMoreElements() and nextElement() methods
-		StringTokenizer st1 = new StringTokenizer("this is a test", " ");
-		while (st1.hasMoreElements()) {
-			System.out.println(st1.nextElement());
+		// Enumeration<?> enumeration = null;  // Generics
+		Enumeration enumeration = null;  
+
+		Vector<Integer> vector = new Vector<>();
+		vector.add(10); 
+		vector.add(20); 
+		vector.add(30);
+		enumeration = vector.elements();
+		while(enumeration.hasMoreElements()) {
+			System.out.println(enumeration.nextElement());	
 		}
 
-		// hasMoreElements() and nextElement() methods are same as 
-		// hasMoreTokens() and nextToken()
-		StringTokenizer st2 = new StringTokenizer("this,is,a,another,test", ",");
-		while (st2.hasMoreTokens()) {
-			System.out.println(st2.nextToken());
+		Hashtable<Integer, String> map = new Hashtable<>();
+		map.put(1,"one"); map.put(2,"two"); map.put(3,"three");
+		enumeration = map.elements();
+		while(enumeration.hasMoreElements()) {
+			System.out.println(enumeration.nextElement()); 	// Prints values in Hash table
 		}
+
 	}
 }
