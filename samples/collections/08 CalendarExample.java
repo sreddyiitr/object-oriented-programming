@@ -20,9 +20,7 @@ public class CalendarExample {
 		
 		System.out.println("Current Default Time: " + indiacalendar.getTime());
 		System.out.println("Default Time Zone: " + indiacalendar.getTimeZone().getDisplayName());
-		
-		// TODO Add code from slides
-		
+				
 		System.out.println("Current Calendar Year: " + indiacalendar.get(Calendar.YEAR));
 		System.out.println("Current Calendar Day: " + indiacalendar.get(Calendar.DATE));
 		System.out.println("Current MINUTE: " + indiacalendar.get(Calendar.MINUTE));
