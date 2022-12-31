@@ -15,12 +15,14 @@ public class CalendarExample {
 		System.out.println("Current India Time: " + indiacalendar.getTime());
 		System.out.println("India Time Zone: " + indiacalendar.getTimeZone().getDisplayName());
 		
-		System.out.println("Current UK Time: " + indiacalendar.getTime());
-		System.out.println("UK Time Zone: " + indiacalendar.getTimeZone().getDisplayName());
+		System.out.println("Current UK Time: " + ukCalendar.getTime());
+		System.out.println("UK Time Zone: " + ukCalendar.getTimeZone().getDisplayName());
 		
-		System.out.println("Current Default Time: " + indiacalendar.getTime());
-		System.out.println("Default Time Zone: " + indiacalendar.getTimeZone().getDisplayName());
-				
+		System.out.println("Current Default Time: " + defaultCalendar.getTime());
+		System.out.println("Default Time Zone: " + defaultCalendar.getTimeZone().getDisplayName());
+		
+		// TODO Add code from slides
+		
 		System.out.println("Current Calendar Year: " + indiacalendar.get(Calendar.YEAR));
 		System.out.println("Current Calendar Day: " + indiacalendar.get(Calendar.DATE));
 		System.out.println("Current MINUTE: " + indiacalendar.get(Calendar.MINUTE));
@@ -32,11 +34,11 @@ public class CalendarExample {
 		// Use following add methods of calendar object to add/subtract days/weeks/months/years
 
 		defaultCalendar.add(Calendar.DATE, -15); // add is a static method
-        System.out.println("15 days ago: " + defaultCalendar.getTime());
-        defaultCalendar.add(Calendar.MONTH, 4);
-        System.out.println("4 months later: " + defaultCalendar.getTime());
-        defaultCalendar.add(Calendar.YEAR, 2);
-        System.out.println("2 years later: " + defaultCalendar.getTime());
+		System.out.println("15 days ago: " + defaultCalendar.getTime());
+		defaultCalendar.add(Calendar.MONTH, 4);
+		System.out.println("4 months later: " + defaultCalendar.getTime());
+		defaultCalendar.add(Calendar.YEAR, 2);
+		System.out.println("2 years later: " + defaultCalendar.getTime());
 		
 
 	}
