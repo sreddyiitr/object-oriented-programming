@@ -7,11 +7,12 @@ import java.util.TimeZone;
 public class CalendarExample {
 
 	public static void main(String[] args) {
-		TimeZone timeZone = TimeZone.getTimeZone("India/Mumbai");
+		TimeZone timeZone = TimeZone.getTimeZone("Asia/Calcutta");
 		Calendar indiacalendar = Calendar.getInstance(timeZone);
 		Calendar ukCalendar = Calendar.getInstance(Locale.UK);
 		Calendar defaultCalendar = Calendar.getInstance();
 		
+		// DO NOT USE getTime() method since it doesn't print the correct time
 		System.out.println("Current India Time: " + indiacalendar.getTime());
 		System.out.println("India Time Zone: " + indiacalendar.getTimeZone().getDisplayName());
 		
@@ -21,12 +22,12 @@ public class CalendarExample {
 		System.out.println("Current Default Time: " + defaultCalendar.getTime());
 		System.out.println("Default Time Zone: " + defaultCalendar.getTimeZone().getDisplayName());
 		
-		// TODO Add code from slides
-		
-		System.out.println("Current Calendar Year: " + indiacalendar.get(Calendar.YEAR));
-		System.out.println("Current Calendar Day: " + indiacalendar.get(Calendar.DATE));
-		System.out.println("Current MINUTE: " + indiacalendar.get(Calendar.MINUTE));
-		System.out.println("Current SECOND: " + indiacalendar.get(Calendar.SECOND));
+		// Calendar.get() gives the correct time based on the time zone
+		System.out.println("Current India Calendar Year: " + indiacalendar.get(Calendar.YEAR));
+		System.out.println("Current India Calendar Day: " + indiacalendar.get(Calendar.DATE));
+		System.out.println("Current India HOUR: " + indiacalendar.get(Calendar.HOUR));
+		System.out.println("Current India MINUTE: " + indiacalendar.get(Calendar.MINUTE));
+		System.out.println("Current India SECOND: " + indiacalendar.get(Calendar.SECOND));
 		
 		ukCalendar.set(Calendar.MONTH, 11);
 		System.out.println("After changing UK Current MONTH to 11 : " + ukCalendar.get(Calendar.MONTH));
