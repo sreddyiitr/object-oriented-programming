@@ -15,13 +15,16 @@ public class PropertiesFileExample {
 		FileReader fileReader;
 		
 		try {
+			// sample-properties is the file name 
 			fileReader = new FileReader("sample-properties");
+			// Entire file will be loaded into properties object 
 			properties.load(fileReader);
+			
 		} catch (FileNotFoundException e) {
-			System.out.println("File Not Found");
+			System.out.println("FileReader File Not Found");
 			e.printStackTrace();
 		} catch (IOException e) {
-			System.out.println("File IO Exception");
+			System.out.println("properties.load File IO Exception");
 			e.printStackTrace();
 		}
 		
